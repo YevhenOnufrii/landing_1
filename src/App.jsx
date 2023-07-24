@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.scss'
 import burgerIconOpen from './assets/Icon_Burger_menu_closed.svg'
+import burgerIconClosed from './assets/Icon_Burger_menu_open.svg'
 import callIcon from './assets/Icon_Phone_call.svg'
 import backgroundImage from './assets/Layer.jpg'
 import logoImg from './assets/Logo_Miami.png'
@@ -15,17 +16,22 @@ function Container({ children }) {
 
 function Header() {
   const [phoneView, setPhoneView] = useState(false)
+  const [burgerIcon, setBurgerIcon] = useState(false)
 
   const handleClick = event => {
-    console.log('Hola')
     event.stopPropagation()
     setPhoneView(!phoneView)
   }
 
+  const changeBurgerIcon = event => {
+    event.stopPropagation()
+    setBurgerIcon(!burgerIcon)
+  }
+
   return (
     <section className="header">
-      <div className="header__burger-icon">
-        <img src={burgerIconOpen} alt="burger menu icon" />
+      <div onClick={e => changeBurgerIcon(e)} className="header__burger-icon">
+        <img src={burgerIcon ? burgerIconOpen : burgerIconClosed} alt="burger menu icon" />
       </div>
       <div className="header__logo">
         <img src={logoImg} alt="logo image" />
