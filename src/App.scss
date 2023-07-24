@@ -1,0 +1,94 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0px auto;
+  padding: 15px;
+}
+
+// ===================================== //
+
+// header
+
+.header {
+  position: relative;
+  z-index: 100;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
+
+  &__burger-icon {
+    align-self: center;
+    cursor: pointer;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 136px;
+      height: 80px;
+    }
+  }
+  &__phone-icon {
+    align-self: center;
+    position: relative;
+    cursor: pointer;
+
+    img {
+      align-self: center;
+      width: 32px;
+      height: 32px;
+    }
+    .phone-number {
+      position: absolute;
+      top: 8px;
+      left: -130px;
+      white-space: nowrap;
+      color: white;
+      font-weight: 700;
+      transform: translate(0, -150px);
+    }
+
+    .phone-active {
+      transform: translate(0, 0);
+      transition: transform 0.7s linear 0s;
+      @media (max-width: 768px) {
+        transform: translate(0, -150px);
+      }
+    }
+  }
+}
+
+// ===================================== //
+
+// main
+
+.main {
+  height: 100vh;
+  width: 100%;
+
+  &__background-img {
+    width: 100%;
+    height: 100%;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+}

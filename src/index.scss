@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap');
+
+@import './scss/null.scss';
+
+html,
+body {
+  height: 100%;
+  background-color: #110a12;
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+img {
+  max-width: 100%;
+}
