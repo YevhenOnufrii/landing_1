@@ -5,33 +5,20 @@ import burgerIconClosed from './assets/Icon_Burger_menu_open.svg'
 import callIcon from './assets/Icon_Phone_call.svg'
 import backgroundImage from './assets/Layer.jpg'
 import logoImg from './assets/Logo_Miami.png'
-
-function Wrapper({ children }) {
-  return <div className="wrapper">{children}</div>
-}
-
-function Container({ children }) {
-  return <div className="container">{children}</div>
-}
+import { Container, Wrapper } from './components/index.js'
 
 function Header() {
   const [phoneView, setPhoneView] = useState(false)
-  const [burgerIcon, setBurgerIcon] = useState(false)
 
   const handleClick = event => {
     event.stopPropagation()
     setPhoneView(!phoneView)
   }
 
-  const changeBurgerIcon = event => {
-    event.stopPropagation()
-    setBurgerIcon(!burgerIcon)
-  }
-
   return (
     <section className="header">
-      <div onClick={e => changeBurgerIcon(e)} className="header__burger-icon">
-        <img src={burgerIcon ? burgerIconOpen : burgerIconClosed} alt="burger menu icon" />
+      <div className="header__burger-icon">
+        <img src={burgerIconClosed} alt="burger menu icon" />
       </div>
       <div className="header__logo">
         <img src={logoImg} alt="logo image" />
