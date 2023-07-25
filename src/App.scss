@@ -15,27 +15,29 @@
 // header
 
 .header {
-  position: relative;
   z-index: 100;
   height: 85px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-top: 35px;
   @media (max-width: 768px) {
     margin-top: 10px;
   }
 
-  &__burger-icon {
-    align-self: center;
-    cursor: pointer;
+  // &__burger-icon {
+  //   align-self: center;
+  //   cursor: pointer;
 
-    img {
-      width: 32px;
-      height: 32px;
-    }
-  }
+  //   img {
+  //     width: 32px;
+  //     height: 32px;
+  //   }
+  // }
 
   &__logo {
+    margin: 0px auto;
+    z-index: 2;
     img {
       width: 136px;
       height: 80px;
@@ -47,10 +49,10 @@
     cursor: pointer;
 
     img {
-      align-self: center;
       width: 32px;
       height: 32px;
     }
+
     .phone-number {
       position: absolute;
       top: 8px;
@@ -69,6 +71,139 @@
       }
     }
   }
+}
+
+// ===================================== //
+
+// burger menu
+
+.burger {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  width: 32px;
+  z-index: 3;
+  cursor: pointer;
+  padding: 5px;
+
+  & div {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    border-radius: 5px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      z-index: 1;
+      top: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+
+    &::after {
+      top: -10px;
+    }
+  }
+}
+
+.burger-checked {
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  margin-left: 88px;
+
+  & div {
+    transform: rotate(135deg);
+
+    &::before,
+    &::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.burger-menu {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 100%;
+  background-color: #0075ff;
+  z-index: 2;
+  padding-left: 100px;
+  padding-top: 15px;
+  transition: all 0.5s ease-in-out;
+
+  .menu {
+    margin-top: 170px;
+    top: 170px;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    margin-left: 100px;
+
+    &__list {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: white;
+
+      li {
+        margin-bottom: 30px;
+        width: fit-content;
+        position: relative;
+        transition: 0.5s ease 0s;
+        &:hover {
+          color: rgb(80, 65, 65);
+        }
+
+        &:hover::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: rgb(80, 65, 65);
+          position: absolute;
+          top: 25px;
+          left: 0;
+        }
+      }
+    }
+    &__phone {
+      margin-top: 20px;
+      color: white;
+
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 2px;
+
+      &_number {
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+      &_text {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.burger-active {
+  right: 0;
 }
 
 // ===================================== //

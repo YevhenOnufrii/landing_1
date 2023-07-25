@@ -1,10 +1,62 @@
 import { useState } from 'react'
 import './App.scss'
-import burgerIconClosed from './assets/Icon_Burger_menu_open.svg'
 import callIcon from './assets/Icon_Phone_call.svg'
 import backgroundImage from './assets/Layer.jpg'
 import logoImg from './assets/Logo_Miami.png'
 import { Container, Wrapper } from './components/index.js'
+
+function BurgerMenu() {
+  const [checked, setChecked] = useState(false)
+  const onCheck = event => {
+    event.stopPropagation()
+    setChecked(!checked)
+  }
+  return (
+    <>
+      <div onClick={e => onCheck(e)} className={checked ? 'burger burger-checked' : 'burger '}>
+        <div></div>
+      </div>
+      <div className={checked ? 'burger-menu burger-active' : 'burger-menu'}>
+        <nav className="menu">
+          <ul className="menu__list">
+            <li>
+              <a href="" className="menu__link">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="" className="menu__link">
+                About US
+              </a>
+            </li>
+            <li>
+              <a href="" className="menu__link">
+                {' '}
+                Gallery
+              </a>
+            </li>
+            <li>
+              <a href="" className="menu__link">
+                Testimonials
+              </a>
+            </li>
+            <li>
+              <a href="" className="menu__link">
+                Contacts
+              </a>
+            </li>
+          </ul>
+          <div className="menu__phone">
+            <a href="tel:+12345555555" className="menu__phone_number">
+              +1 234 555-55-55
+            </a>
+            <p className="menu__phone_text">call to order</p>
+          </div>
+        </nav>
+      </div>
+    </>
+  )
+}
 
 function Header() {
   const [phoneView, setPhoneView] = useState(false)
@@ -16,9 +68,8 @@ function Header() {
 
   return (
     <section className="header">
-      <div className="header__burger-icon">
-        <img src={burgerIconClosed} alt="burger menu icon" />
-      </div>
+      <BurgerMenu />
+
       <div className="header__logo">
         <img src={logoImg} alt="logo image" />
       </div>

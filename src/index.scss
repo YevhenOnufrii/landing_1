@@ -5,6 +5,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
   // background-color: #110a12;
 
   font-family: Roboto;
@@ -14,4 +15,8 @@ body {
 
 img {
   max-width: 100%;
+}
+
+* a {
+  color: inherit;
 }
