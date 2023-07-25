@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.scss'
-import burgerIconOpen from './assets/Icon_Burger_menu_closed.svg'
 import burgerIconClosed from './assets/Icon_Burger_menu_open.svg'
 import callIcon from './assets/Icon_Phone_call.svg'
 import backgroundImage from './assets/Layer.jpg'
@@ -41,6 +40,11 @@ function Main() {
     <section className="main">
       <div className="main__background-img">
         <img src={backgroundImage} alt="background image" />
+      </div>
+      <div className="main__title">
+        <h1 className="main__title_text">
+          Miami <br /> Condo Kings
+        </h1>
       </div>
     </section>
   )
