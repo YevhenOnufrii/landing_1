@@ -9,6 +9,9 @@ import imageList_3 from './assets/gallery_3.jpg'
 import imageList_4 from './assets/gallery_4.jpg'
 import imageList_5 from './assets/gallery_5.jpg'
 import imageList_6 from './assets/gallery_6.jpg'
+import imageTestimonial_1 from './assets/testimonial_1.jpg'
+import imageTestimonial_2 from './assets/testimonial_2.jpg'
+import imageTestimonial_3 from './assets/testimonial_3.jpg'
 import { Container, Wrapper } from './components/index.js'
 
 function BurgerMenu() {
@@ -225,6 +228,45 @@ function Testimonials() {
               fill="#0075FF"
             />
           </svg>
+        </div>
+      </div>
+      <div className="testimonials__list testimonial">
+        <div className="testimonial__box">
+          <div className="testimonial__box_image">
+            <img src={imageTestimonial_1} alt="" />
+          </div>
+          <div className="testimonial__box_user-info user-info">
+            <h4 className="user-info_name">Leslie Mckinney</h4>
+            <p className="user-info_position">ceo</p>
+            <p className="user-info_comment">
+              Nice work, Certificates National Association of Realtors (USA)
+            </p>
+          </div>
+        </div>
+        <div className="testimonial__box">
+          <div className="testimonial__box_image">
+            <img src={imageTestimonial_2} alt="" />
+          </div>
+          <div className="testimonial__box_user-info user-info">
+            <h4 className="user-info_name">Scarlett Hawkins</h4>
+            <p className="user-info_position">Senior Vice President</p>
+            <p className="user-info_comment">
+              My soul is illuminated by an unearthly joy, as these beautiful spring morning, which I
+              enjoy with all my heart.
+            </p>
+          </div>
+        </div>
+        <div className="testimonial__box">
+          <div className="testimonial__box_image">
+            <img src={imageTestimonial_3} alt="" />
+          </div>
+          <div className="testimonial__box_user-info user-info">
+            <h4 className="user-info_name">Max Henry</h4>
+            <p className="user-info_position">Chief Design Officer</p>
+            <p className="user-info_comment">
+              When my lovely valley of steam rises and half-day sun is above an impermeable
+            </p>
+          </div>
         </div>
       </div>
     </section>
