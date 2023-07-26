@@ -322,3 +322,25 @@
     }
   }
 }
+
+// ========================================= //
+// GAllery
+
+.gallery {
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_icon {
+      height: fit-content;
+      position: relative;
+
+      & svg {
+        width: 20px;
+        height: 13px;
+        transform: translate(0, -15px);
+      }
+    }
+  }
+}
