@@ -3,6 +3,12 @@ import './App.scss'
 import callIcon from './assets/Icon_Phone_call.svg'
 import backgroundImage from './assets/Layer.jpg'
 import logoImg from './assets/Logo_Miami.png'
+import imageList_1 from './assets/gallery_1.jpg'
+import imageList_2 from './assets/gallery_2.jpg'
+import imageList_3 from './assets/gallery_3.jpg'
+import imageList_4 from './assets/gallery_4.jpg'
+import imageList_5 from './assets/gallery_5.jpg'
+import imageList_6 from './assets/gallery_6.jpg'
 import { Container, Wrapper } from './components/index.js'
 
 function BurgerMenu() {
@@ -132,6 +138,10 @@ function Main() {
 }
 
 function Gallery() {
+  const handleClick = event => {
+    event.stopPropagation()
+    event.preventDefault()
+  }
   return (
     <>
       <section className="gallery">
@@ -154,7 +164,44 @@ function Gallery() {
             </svg>
           </div>
         </div>
-        <div className="gallery__list"></div>
+        <div className="gallery-list">
+          <a href="#" className="image-box">
+            <div className="image-box__first-image">
+              <img src={imageList_1} alt="image" />
+            </div>
+            <div className="image-box__second-image">
+              <img src={imageList_2} alt="image" />
+            </div>
+            <h3 className="image-box__title">
+              <span>Marina Palms</span> / North Miami Beach, FL 33162
+            </h3>
+          </a>
+          <a href="#" className="image-box">
+            <div className="image-box__first-image">
+              <img src={imageList_3} alt="image" />
+            </div>
+            <div className="image-box__second-image">
+              <img src={imageList_4} alt="image" />
+            </div>
+            <h3 className="image-box__title">
+              <span>Edition Residens</span> /Miami Beach, FL 33139
+            </h3>
+          </a>
+          <a href="#" className="image-box">
+            <div className="image-box__first-image">
+              <img src={imageList_5} alt="image" />
+            </div>
+            <div className="image-box__second-image">
+              <img src={imageList_6} alt="image" />
+            </div>
+            <h3 className="image-box__title">
+              <span>Faena House</span> / Miami Beach, FL 33140
+            </h3>
+          </a>
+        </div>
+        <a onClick={e => handleClick(e)} href="" className="gallery__view-all-btn">
+          View all
+        </a>
       </section>
     </>
   )
