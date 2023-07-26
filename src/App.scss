@@ -273,6 +273,11 @@
   & span {
     color: #0075ff;
   }
+  & svg {
+    width: 20px;
+    height: 13px;
+    transform: translate(0, -20px);
+  }
 }
 
 .about {
@@ -327,6 +332,7 @@
 // GAllery
 
 .gallery {
+  margin-bottom: 100px;
   &__title {
     display: flex;
     flex-direction: column;
@@ -337,13 +343,13 @@
       margin-bottom: 30px;
     }
 
-    &_icon {
-      & svg {
-        width: 20px;
-        height: 13px;
-        transform: translate(0, -20px);
-      }
-    }
+    // &_icon {
+    // & svg {
+    //   width: 20px;
+    //   height: 13px;
+    //   transform: translate(0, -20px);
+    // }
+    // }
   }
 
   .image-box {
@@ -428,5 +434,14 @@
       background-color: #0075ff;
       color: white;
     }
+  }
+}
+
+.testimonials {
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
   }
 }
