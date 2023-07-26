@@ -18,6 +18,7 @@ function BurgerMenu() {
   const [checked, setChecked] = useState(false)
   const onCheck = event => {
     event.stopPropagation()
+
     setChecked(!checked)
   }
 
