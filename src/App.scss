@@ -28,6 +28,7 @@
   &__logo {
     transform: translate(15%, 0);
     z-index: 2;
+
     img {
       width: 136px;
       height: 80px;
@@ -40,7 +41,6 @@
   &__phone-icon {
     position: relative;
     padding-top: 10px;
-    padding-right: 15px;
     cursor: pointer;
 
     img {
@@ -50,7 +50,7 @@
 
     .phone-number {
       position: absolute;
-      top: 8px;
+      top: 15px;
       left: -130px;
       white-space: nowrap;
       color: white;
@@ -438,7 +438,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .testimonial {
