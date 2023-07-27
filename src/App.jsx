@@ -3,6 +3,7 @@ import './App.scss'
 import callIcon from './assets/Icon_Phone_call.svg'
 import backgroundImage from './assets/Layer.jpg'
 import logoImg from './assets/Logo_Miami.png'
+import footer_bgImage from './assets/footer_bgc.jpg'
 import imageList_1 from './assets/gallery_1.jpg'
 import imageList_2 from './assets/gallery_2.jpg'
 import imageList_3 from './assets/gallery_3.jpg'
@@ -335,6 +336,29 @@ function ContactUs() {
   )
 }
 
+function Footer() {
+  return (
+    // <section className="footer">
+    //   <footer className="footer-box">
+    //     <div className="footer-box__image">
+    //       <img src={footer_bgImage} alt="footer background image" />
+    //     </div>
+    //     <div className="footer-box__logo">
+    //       <img src={logoImg} alt="logo" />
+    //     </div>
+    //   </footer>
+    // </section>
+    <section className="footer">
+      <div className="footer__image">
+        <img src={footer_bgImage} alt="footer background image" />
+      </div>
+      <div className="footer__logo">
+        <img src={logoImg} alt="logo" />
+      </div>
+    </section>
+  )
+}
+
 function App() {
   return (
     <>
@@ -347,6 +371,7 @@ function App() {
           <Testimonials />
           <ContactUs />
         </Container>
+        <Footer />
       </Wrapper>
     </>
   )
