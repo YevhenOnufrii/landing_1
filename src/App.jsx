@@ -338,15 +338,23 @@ function ContactUs() {
 
 function Footer() {
   return (
+    // <section className="footer">
+    //   <footer className="footer-box">
+    //     <div className="footer-box__image">
+    //       <img src={footer_bgImage} alt="footer background image" />
+    //     </div>
+    //     <div className="footer-box__logo">
+    //       <img src={logoImg} alt="logo" />
+    //     </div>
+    //   </footer>
+    // </section>
     <section className="footer">
-      <footer className="footer-box">
-        <div className="footer-box__image">
-          <img src={footer_bgImage} alt="footer background image" />
-        </div>
-        <div className="footer-box__logo">
-          <img src={logoImg} alt="logo" />
-        </div>
-      </footer>
+      <div className="footer__image">
+        <img src={footer_bgImage} alt="footer background image" />
+      </div>
+      <div className="footer__logo">
+        <img src={logoImg} alt="logo" />
+      </div>
     </section>
   )
 }
@@ -363,7 +371,7 @@ function App() {
           <Testimonials />
           <ContactUs />
         </Container>
-        {/* <Footer /> */}
+        <Footer />
       </Wrapper>
     </>
   )
