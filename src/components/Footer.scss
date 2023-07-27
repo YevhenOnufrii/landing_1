@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__image {
+    & img {
+      transform: translate(-0, 2%);
+      max-height: 360px;
+    }
+  }
+
+  &__logo {
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 136px;
+      @media (max-width: 768px) {
+        max-width: 90px;
+      }
+    }
+  }
+}

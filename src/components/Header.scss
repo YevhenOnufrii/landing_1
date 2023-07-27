@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 85px;
+  margin-top: 35px;
+  z-index: 100;
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
+
+  .burger-box {
+    flex: 0 1 33.333%;
+  }
+
+  &__logo {
+    flex: 0 0 33.333%;
+    transform: translate(18%, 0);
+    z-index: 2;
+
+    img {
+      width: 136px;
+      height: 80px;
+      @media (max-width: 375px) {
+        width: 82px;
+        height: 48px;
+      }
+    }
+  }
+  &__phone-icon {
+    flex: 0 0 33.333%;
+    position: relative;
+    padding-top: 10px;
+    cursor: pointer;
+    text-align: right;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .phone-number {
+      position: absolute;
+      top: 18px;
+      right: 80px;
+      white-space: nowrap;
+      color: white;
+      font-weight: 700;
+      transform: translate(0, -150px);
+    }
+
+    .phone-active {
+      transform: translate(0, 0);
+      transition: transform 0.7s linear 0s;
+      @media (max-width: 768px) {
+        transform: translate(0, -150px);
+      }
+    }
+  }
+}
